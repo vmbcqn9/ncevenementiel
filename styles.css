@@ -485,8 +485,32 @@ footer {
     #scart{
         display: table;
     }
+
+    #main-content img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* This will ensure the image covers the container while maintaining its aspect ratio */
+        object-position: center; /* This will center the image within the container */
     
-  
+    }
+    #main-content h3 {
+        position: absolute; 
+        top: 20%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        color: white; 
+        font-family: 'Heiti SC';
+        font-weight: 300;
+        font-size: 17px;
+        text-shadow: 1px 1px 2px #000000; 
+        white-space: nowrap;
+        overflow: hidden; 
+        max-width: 100%; /* Assure que le texte ne dépasse pas la largeur de l'image */
+        text-align: center; /* Centre le texte */
+        opacity: 0; /* Texte invisible au départ */
+        animation: fadeIn 1s ease-in-out forwards; /* Animation définie */
+        animation-delay: 0.3s; /* Délai avant le début de l'animation */
+    }
 
 }
 
