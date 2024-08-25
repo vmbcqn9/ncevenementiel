@@ -552,15 +552,17 @@ footer {
         border: 1px solid #ccc;
         border-radius: 3px;
         overflow: hidden;
-        width: 150px;
+        width: 176px;
         margin: 10px;
-          margin-top: 10px;
-          margin-left: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: #ffffff;
         margin-top: 40px;
         font-family: "Heiti SC";
-        margin-left: 1em;
+        margin-left: 0.4em;
       }
 
 }
