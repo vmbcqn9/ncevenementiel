@@ -20,6 +20,16 @@ body.no-scroll {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Heiti SC'; /* Nom de la police */
+    src: url('polices/HeitiSC.woff2') format('woff2'), /* Chemin vers le fichier WOFF2 */
+         url('polices/HeitiSC.woff') format('woff'), /* Chemin vers le fichier WOFF */
+         url('polices/HeitiSC.ttf') format('truetype'); /* Chemin vers le fichier TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /***************** NAVBAR ******************/
 .logo {
     height: 160px;
@@ -489,7 +499,7 @@ footer {
     /********* MAIN CONTENT*****/
     #main-content{
         height:auto ;
-        font-family: "Avenir";
+        
     }
 
     #main-content img {
