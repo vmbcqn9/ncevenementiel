@@ -506,7 +506,7 @@ footer {
         color: white; 
         font-family: 'Heiti SC';
         font-weight: 300;
-        font-size: 17px;
+        font-size: 18px;
         text-shadow: 1px 1px 2px #000000; 
         white-space: nowrap;
         overflow: hidden; 
@@ -515,6 +515,24 @@ footer {
         opacity: 0; /* Texte invisible au départ */
         animation: fadeIn 1s ease-in-out forwards; /* Animation définie */
         animation-delay: 0.3s; /* Délai avant le début de l'animation */
+    }
+    /********* PRES *****/
+
+    .presentation h1{
+    color: rgb(255, 255, 255);
+  font-family: "Heiti SC";
+  font-size: 20px;
+  margin-top: 20px;
+  text-decoration: 1.5px underline;
+  padding: 10px;
+    }
+
+    .card-container{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: normal;
     }
 
 }
