@@ -489,6 +489,7 @@ footer {
     /********* MAIN CONTENT*****/
     #main-content{
         height:auto ;
+        font-family: "Avenir";
     }
 
     #main-content img {
@@ -496,7 +497,6 @@ footer {
         height: auto;
         object-fit: cover; /* This will ensure the image covers the container while maintaining its aspect ratio */
         object-position: center; /* This will center the image within the container */
-    
     }
     #main-content h3 {
         position: absolute; 
