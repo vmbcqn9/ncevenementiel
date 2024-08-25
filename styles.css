@@ -449,6 +449,7 @@ footer {
         width: 100%;
         height:100%;
         transition: 0.25s;
+        font-family: "Avenir";
        
     }
     nav ul.active {
@@ -477,7 +478,7 @@ footer {
    
     #nav-right2{
         display: table;
-        margin-top: 5em;
+        margin-top: 2em;
         text-decoration: underline;
       }
     
