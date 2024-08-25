@@ -435,8 +435,9 @@ footer {
     }
 
     nav h3{
-        font-size: 15px;
+        font-size: 18px;
         letter-spacing: 3px;
+        white-space: nowrap;
     }
   
 
