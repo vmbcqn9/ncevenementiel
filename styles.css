@@ -532,11 +532,20 @@ footer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: normal;
+        
     }
 
     .card p{
         display: none;
+    }
+
+    .card-title{
+        font-size: 12px;
+  margin-bottom: 10px;
+    }
+
+    .card-button{
+        font-size: 11px;
     }
 
     .card {
