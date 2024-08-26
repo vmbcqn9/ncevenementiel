@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Heiti SC'; /* Nom de la police */
+    src: 
+         url('HeitiSC.ttf') format('truetype'); /* Chemin vers le fichier TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     padding: 0;
     margin: 0;
