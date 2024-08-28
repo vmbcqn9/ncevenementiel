@@ -311,7 +311,7 @@ nav .dropdown-content {
   
   .card img {
     width: 100%;
-    height: auto;
+    height: 300px;
     border-bottom: 0.1px solid #ffffff;
   }
   
@@ -572,8 +572,13 @@ footer {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: #ffffff;
         margin-top: 40px;
-        font-family: "Avenir";
+        font-family: "Lato";
+        font-weight: 200;
         
+      }
+
+      .card img{
+        height:175px;
       }
 
 }
