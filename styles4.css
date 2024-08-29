@@ -433,8 +433,8 @@ footer {
    
     #nav-right2{
         display: table;
-        margin-top: 2em;
-        text-decoration: underline;
+        margin-top: 1em;
+        text-decoration: 0.4px underline;
       }
     
     #scart{
