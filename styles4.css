@@ -160,6 +160,13 @@ nav .dropdown-content {
     z-index: 1;
 }
 
+#nav-right2{
+    display: none;
+}
+
+#scart{
+    display: none;
+}
 
 
 #num {
@@ -357,4 +364,80 @@ footer {
 
 .social-icon:hover {
     color: purple;
+}
+
+
+@media (max-width:900px){
+    #icons{
+        display: block;
+    }
+    #icons:before{
+        content:"\2630" ;
+    }
+    #icons.actived::before {
+        content: "\2715"; /* Cross icon */
+       
+    }
+    
+    #num.activ{
+        display: block;
+
+    }
+
+    
+    nav{
+        height:80px;
+    }
+
+    nav h3{
+        font-size: 18px;
+        letter-spacing: 3px;
+        white-space: nowrap;
+    }
+  
+
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top:5.5%;
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+        transition: 0.25s;
+        font-family: "Montserrat";
+       
+    }
+    nav ul.active {
+        left: 0;
+    }
+    nav li{
+        padding: 13px 0;
+        
+    }
+    
+    nav.active ul{
+        left:0;
+
+    }
+    nav{
+        font-size: 23px;
+    }
+
+    .overlay.active{
+        display: none;
+    }
+
+    #nav-right{
+        display: none;
+    }
+   
+    #nav-right2{
+        display: table;
+        margin-top: 2em;
+        text-decoration: underline;
+      }
+    
+    #scart{
+        display: table;
+    }
 }
