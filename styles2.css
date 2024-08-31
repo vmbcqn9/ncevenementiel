@@ -583,4 +583,9 @@ footer {
         font-size:1rem;
     }
 
+    .btn.prev {
+        left:10px;
+    }
+
+    
 }
