@@ -105,7 +105,10 @@ nav h3{
 .name:hover{
     text-decoration: none;
 }
-
+#sous{
+    font-size: 20px;
+    margin-left: 47px;
+}
 
 /* Overlay styling */
 .overlay {
