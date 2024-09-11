@@ -20,6 +20,12 @@
             <li class="dropdown">
                 <a href="location1.html">Chaises </a>
             </li>
+            <li class="dropdown" id="sous">
+                <a href="chaiseI.html">-   Chaises Invités</a>
+            </li>
+            <li class="dropdown" id="sous">
+                <a href="chaiseDM.html">-   Chaises des mariés</a>
+            </li>
             <li class="dropdown">
                 <a href="tables.html">Tables</a>
             </li>
@@ -90,7 +96,9 @@
             <div class="bas">
                 <label for="quantity" class="quantity-label">Quantité:</label>
                 <input type="number" id="quantity" name="quantity" value="50" min="50" class="quantity-input">
-                <button id="add-to-cart-btn" class="add-to-cart-btn">Ajouter au panier</button>
+                
+                <button id="rent-btn" class="add-to-cart-btn" data-type="rental">Louer</button>
+                
             </div>
         </div>
     </div>
@@ -111,6 +119,7 @@
     </footer>
     
     <script src="script.js"></script>
+    <script src="cart.js"></script>
     <script src="script2.js"></script>
     <script src="https://kit.fontawesome.com/6d7557d03a.js" crossorigin="anonymous"></script>
 
