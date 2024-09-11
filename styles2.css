@@ -485,13 +485,27 @@ footer {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin: 20px;
     cursor: pointer;
     border-radius: 5px;
 }
 
 .clear-cart-btn:hover {
     background-color: #ff1a1a;
+}
+
+.confirm-cart-btn {
+    background-color: #257529;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.confirm-cart-btn:hover {
+    background-color: #30be64;
 }
 
 @media (max-width:900px){
