@@ -69,6 +69,13 @@ nav h3 {
     color: rgb(255, 255, 255);
 }
 
+#sous{
+    font-size: 20px;
+    margin-left: 47px;
+}
+
+
+
 /* Définir l'animation fadeIn */
 @keyframes fadeIn {
     from {
@@ -203,7 +210,6 @@ nav .dropdown-content {
 #icons.actived::before {
     content: "\2715"; /* Cross icon */
 }
-
 
 
 

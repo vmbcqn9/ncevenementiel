@@ -20,30 +20,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.getElementById('add-to-cart-btn').addEventListener('click', function() {
-    // Get product details
-    const title = document.querySelector('.product-title').innerText;
-    const price = document.querySelector('.product-price span').innerText.replace('€', '').trim();
-    const quantity = document.getElementById('quantity').value;
+document.addEventListener('DOMContentLoaded', function() {
+    const rentButton = document.getElementById('rent-btn');
 
-    // Create a product object
-    const product = {
-        title,
-        price,
-        quantity
-    };
+    rentButton.addEventListener('click', function() {
+        const productTitle = document.querySelector('.product-title').textContent;
+        const productPrice = document.querySelector('.product-price span').textContent;
+        const quantity = document.getElementById('quantity').value;
 
-    // Get the current cart from localStorage
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const product = {
+            title: productTitle,
+            price: productPrice,
+            quantity: quantity
+        };
 
-    // Add the new product to the cart
-    cart.push(product);
+        // Récupérer le panier du localStorage ou créer un nouveau panier
+        let cart = localStorage.getItem('cart');
+        if (cart) {
+            cart = JSON.parse(cart);
+        } else {
+            cart = [];
+        }
 
-    // Save the updated cart to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
+        // Ajouter le produit au panier
+        cart.push(product);
 
-    // Optionally, give feedback to the user
-    alert('Produit ajouté au panier!');
+        // Sauvegarder le panier dans le localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Rediriger vers la page du panier
+        window.location.href = 'cart.html';
+    });
 });
-
 
