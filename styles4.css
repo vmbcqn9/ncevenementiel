@@ -447,12 +447,22 @@ footer {
     .card {
         width:175px;
         margin:8px;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .card img{
         height:175px;
+        width: 100%;
 
     }
+    .card-button{
+        margin-top: auto;
+    }
+
+    
 
     .card h3 {
         font-size:15px;
