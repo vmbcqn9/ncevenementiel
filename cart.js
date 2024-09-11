@@ -1,57 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const rentalItemsContainer = document.getElementById('rental-items');
-    const buyingItemsContainer = document.getElementById('buying-items');
-    const clearCartBtn = document.getElementById('clear-cart-btn');
+    const cartContainer = document.querySelector('.container');
 
-    // Get the cart from localStorage
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = localStorage.getItem('cart');
+    if (cart) {
+        cart = JSON.parse(cart);
 
-    if (cart.length === 0) {
-        rentalItemsContainer.innerHTML = '<p>Votre panier est vide.</p>';
-        buyingItemsContainer.innerHTML = '<p>Votre panier est vide.</p>';
-    } else {
-        let hasRentalItems = false;
-        let hasBuyingItems = false;
+        cart.forEach((item, index) => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('cart-item');
 
-        // Generate HTML for each cart item
-        cart.forEach(item => {
-            const itemElement = document.createElement('div');
-            itemElement.classList.add('cart-item');
-            
-            itemElement.innerHTML = `
+            productDiv.innerHTML = `
                 <h3>${item.title}</h3>
-                <p>Prix: ${item.price} €</p>
+                <p>Prix: ${item.price}</p>
                 <p>Quantité: ${item.quantity}</p>
-                <p>Prix Total: ${item.quantity * item.price} €</p>
+                <button class="remove-item-btn" data-index="${index}">Retirer</button>
             `;
 
-            // Check if the item is for rental or purchase
-            if (item.type === 'rental') {
-                rentalItemsContainer.appendChild(itemElement);
-                hasRentalItems = true;
-            } else if (item.type === 'buying') {
-                buyingItemsContainer.appendChild(itemElement);
-                hasBuyingItems = true;
-            }
+            cartContainer.appendChild(productDiv);
         });
 
-        // Display empty message if no items in either section
-        if (!hasRentalItems) {
-            rentalItemsContainer.innerHTML = '<p>Pas d\'articles en location.</p>';
-        }
+        // Bouton pour vider le panier
+        const clearCartBtn = document.getElementById('clear-cart-btn');
+        clearCartBtn.addEventListener('click', function() {
+            localStorage.removeItem('cart');
+            cartContainer.innerHTML = '<h2>Votre panier est vide.</h2>';
+        });
 
-        if (!hasBuyingItems) {
-            buyingItemsContainer.innerHTML = '<p>Pas d\'articles à acheter.</p>';
-        }
+        // Boutons pour retirer un produit spécifique
+        const removeButtons = document.querySelectorAll('.remove-item-btn');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const index = this.getAttribute('data-index');
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                window.location.reload();
+            });
+        });
+    } else {
+        cartContainer.innerHTML = '<h2>Votre panier est vide.</h2>';
     }
-
-    // Event listener for the clear cart button
-    clearCartBtn.addEventListener('click', function() {
-        // Clear the cart from localStorage
-        localStorage.removeItem('cart');
-        
-        // Clear the cart items from the page
-        rentalItemsContainer.innerHTML = '<p>Votre panier est vide.</p>';
-        buyingItemsContainer.innerHTML = '<p>Votre panier est vide.</p>';
-    });
 });
