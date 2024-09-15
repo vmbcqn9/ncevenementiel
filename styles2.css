@@ -327,6 +327,10 @@ nav h3{
     margin-right: 15px;
 }
 
+.product-img{
+    display: none;
+}
+
 .bas{
     margin-top: 40px;
 }
