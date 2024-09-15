@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<body>
+
+    <div id="overlay" class="overlay"></div>
+    <nav id="nav">
+        <div id="icons"></div>
+        <a href="index.html" class="name"><h3>NC EVENEMENTIEL</h3></a>
+        <ul id="nav-menu">
+            <li class="dropdown">
+                <a href="location1.html">Chaises </a>
+            </li>
+            <li class="dropdown" id="sous">
+                <a href="chaiseI.html">-   Chaises Invités</a>
+            </li>
+            <li class="dropdown" id="sous">
+                <a href="chaiseDM.html">-   Chaises des mariés</a>
+            </li>
+            <li class="dropdown">
+                <a href="tables.html">Tables</a>
+            </li>
+            <li class="dropdown">
+                <a href="cdt.html">Décorations de table</a>
+            </li>
+            <li class="dropdown">
+                <a href="tonnelles.html">Tonnelles </a>
+            </li>
+            <li class="dropdown">
+                <a href="vaisselle.html">Vaisselle</a>
+            </li>
+            <li class="dropdown">
+                <a href="tdm.html">Trônes des mariés</a>
+            </li>
+            <li class="dropdown">
+                <a href="divers.html">Divers</a>
+            </li>
+            <li class="dropdown">
+                <a href="location.html">Tout nos produits</a>
+            </li>
+          
+            <div id="nav-right2">
+                <li> <a href="galleries.html">Gallerie</a></li>
+                <li><a href="devis.html">Demande de devis</a></li>
+            </div>
+  
+            
+        </ul>
+  
+        <div id="nav-right">
+            
+        
+        <a href="galleries.html">Gallerie</a>
+        <a href="devis.html">Demande de devis</a>
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+    </div>
+  <div id="scart"> <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></div>
+   
+    </nav>
+
+    <div class="container">
+        <h1>Récapitulatif de la commande :</h1>
+    </div>
+
+    <button id="continue-btn" class="continue-btn" style="display: block;">
+        Continuer
+    </button>
+
+    <div class="contact" id="contact" style="display: none;">
+        <form action="process_form.php" method="post" id="contact-form">
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+            <input type="text" id="name" name="name" placeholder="Nom" required>
+            <input type="tel" id="tel" name="tel" placeholder="Numéro de téléphone" required>
+            <input type="email" id="Email" name="Email" placeholder="Adresse e-mail" required>
+            <input type="text" id="datepicker" name="date" placeholder="Sélectionnez une date" readonly>
+        
+            <!-- Hidden field to hold the cart details -->
+            <input type="hidden" id="cartDetails" name="cartDetails">
+        
+            <input type="submit" value="Envoyer">
+        </form>
+        
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize datepicker
+            $("#datepicker").datepicker({
+                dateFormat: 'dd-mm-yy',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-100:c+10",
+                dayNames: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
+                dayNamesMin: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"],
+                monthNames: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+                monthNamesShort: ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"],
+                firstDay: 1
+            });
+
+            // Show the contact form when the "Continuer" button is clicked
+            $("#continue-btn").click(function() {
+                $("#contact").toggle();
+                $("#continue-btn").toggle(); // Toggles the visibility of the contact form
+            });
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/6d7557d03a.js" crossorigin="anonymous"></script>
+    <script src="cart2.js"></script>
+    <script src="script2.js"></script>
+
+</body>
+</html>

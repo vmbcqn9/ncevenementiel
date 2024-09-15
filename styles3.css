@@ -196,10 +196,17 @@ nav .dropdown-content {
 
 /************ CTNR **************/
 
+.remove-item-btn{
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+
 .container h1{
     font-family: "Heiti SC";
     padding: 20px;
 }
+
 
 
 #cart-items{
@@ -214,11 +221,7 @@ nav .dropdown-content {
     font-family: "Heiti SC";
 }
 
-/* Container holding both sections */
-.cart-split {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 /* Styling each section */
 .cart-section {
@@ -230,32 +233,9 @@ nav .dropdown-content {
     background-color: #f9f9f9; /* Background color for each section */
 }
 
-/* Ensure the sections align correctly on smaller screens */
-@media screen and (max-width: 768px) {
-    .cart-split {
-        flex-direction: column; /* Stack sections vertically on smaller screens */
-    }
-
-    .cart-section {
-        width: 100%; /* Full width when stacked */
-        margin-bottom: 20px; /* Space between stacked sections */
-    }
-}
-
-/* Adjust the button to be centered below the sections */
-.clear-cart-btn {
-    display: block;
-    margin: 20px auto;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.clear-cart-btn:hover {
-    background-color: #ff1a1a;
+.product-img{
+    width:150px;
+    height: 150px;
 }
 
 
@@ -311,4 +291,134 @@ footer {
 
 .social-icon:hover {
     color: purple;
+}
+
+
+
+
+.confirm-cart-btn {
+    background-color: #257529;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Avenir";
+}
+
+.confirm-cart-btn:hover {
+    background-color: #30be64;
+}
+
+
+.Pvide{
+    display: flex;
+    font-family: "Avenir";
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.pTot{
+    font-family: "Avenir";
+}
+
+@media (max-width:900px){
+    #icons{
+        display: block;
+    }
+    #icons:before{
+        content:"\2630" ;
+    }
+    #icons.actived::before {
+        content: "\2715"; /* Cross icon */
+       
+    }
+    
+    #num.activ{
+        display: block;
+
+    }
+
+    
+    nav{
+        height:80px;
+    }
+
+    nav h3{
+        font-size: 18px;
+        letter-spacing: 3px;
+        white-space: nowrap;
+    }
+  
+
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top:5.5%;
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+        transition: 0.25s;
+        font-family: "Montserrat";
+       
+    }
+    nav ul.active {
+        left: 0;
+    }
+    nav li{
+        padding: 13px 0;
+        
+    }
+    
+    nav.active ul{
+        left:0;
+
+    }
+    nav{
+        font-size: 23px;
+    }
+
+    .overlay.active{
+        display: none;
+    }
+
+    #nav-right{
+        display: none;
+    }
+   
+    #nav-right2{
+        display: table;
+        margin-top: 1em;
+        text-decoration: 0.4px underline;
+      }
+    
+    #scart{
+        display: table;
+    }
+
+    .container{
+        flex-direction: column;
+        padding:0;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 400px;
+        display: block;
+        border: 0.1px solid black;
+    }
+    .container li{
+        margin-left: 0;
+    }
+
+    .btn{
+        font-size:1rem;
+    }
+
+    .btn.prev {
+        left:10px;
+    }
+
+    
 }

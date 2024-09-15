@@ -17,10 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             productDiv.innerHTML = `
                <h3>${item.title}</h3>
-               <p>Prix par unité: ${item.price} €</p>
                <p>Quantité: ${item.quantity}</p>
-               <p>Prix: ${itemTotalPrice.toFixed(2)} €</p>
-               <button class="remove-item-btn" data-index="${index}"><i class="fa fa-trash-o"></i> Retirer</button>
             `;
 
             cartContainer.appendChild(productDiv);
@@ -32,23 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
         totalDiv.innerHTML = `<h3 class="pTot">Prix Total: ${totalPrice.toFixed(2)} €</h3>`;
         cartContainer.appendChild(totalDiv);
 
-        // Afficher ou masquer le bouton de confirmation en fonction des articles dans le panier
-        confirmCartButton.style.display = 'block'; // Afficher le bouton
 
-        // Logique de suppression d'un élément
-        const removeButtons = document.querySelectorAll('.remove-item-btn');
-        removeButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const index = this.getAttribute('data-index');
-                cart.splice(index, 1); // Supprimer l'article du tableau
-                localStorage.setItem('cart', JSON.stringify(cart)); // Mettre à jour le localStorage
-                window.location.reload(); // Recharger la page
-            });
-        });
 
     } else {
         // Si le panier est vide
         cartContainer.innerHTML = '<h2 class="Pvide">Votre panier est vide.</h2>';
         confirmCartButton.style.display = 'none'; // Masquer le bouton si aucun article
     }
+});
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    // Prevent the form from submitting immediately
+    event.preventDefault();
+
+    // Get the content of the container (cart items)
+    var containerContent = document.querySelector('.container').innerHTML;
+
+    // Assign the container content to the hidden input field
+    document.getElementById('cartDetails').value = containerContent;
+
+    // Now allow the form to submit
+    this.submit();
 });
