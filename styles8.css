@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    overflow-x: hidden;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html.no-scroll {
+    overflow: hidden !important; 
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body.no-scroll {
+    overflow: hidden !important; 
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+.container h1{
+    font-family: "Avenir";
+}
+
+
+
+.container p, h3 {
+    font-family: "Heiti SC";
+}
+
+.container h3{
+    padding-top: 10px;
+}
+
+.pTot{
+    margin-top: 20px;
+    font-weight: bold ;
+}
+
+.container p{
+    padding-bottom: 10px;
+}
+
+button{
+    cursor:pointer;
+    padding: 10px 20px;
+   
+    border-radius: 5px;
+    border: 0.5px solid;
+}
+
+.continue-btn{
+    float: right;
+}
+
+.contact h1{
+    font-family: "Avenir";
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 5px;
+    margin: 5px 30px;
+}
+
+.env {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    margin-top: 10px;
+    max-width: 100px;
+    margin-left: auto; /* Add this line */
+  }
+  
+
+.bigdiv{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    max-width: 800px;
+  margin: auto;
+    margin-top: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+/* Header */
+.datepicker .datepicker-header {
+    background: #007BFF; /* Header background color */
+    color: white; /* Header text color */
+    padding: 10px; /* Padding inside the header */
+    text-align: center; /* Center text */
+    border-top-left-radius: 5px; /* Rounded corners */
+    border-top-right-radius: 5px; /* Rounded corners */
+  }
+  
+  /* Days of the week */
+  .datepicker .datepicker-weekdays {
+    display: flex; /* Flex layout for weekdays */
+    background: #f1f1f1; /* Background for the weekdays */
+    color: #333; /* Text color */
+  }
+  
+  /* Individual day cells */
+  .datepicker .datepicker-day {
+    width: 40px; /* Width of each day cell */
+    height: 40px; /* Height of each day cell */
+    display: flex; /* Flex layout for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Hover effect for day cells */
+  .datepicker .datepicker-day:hover {
+    background: #e9e9e9; /* Background color on hover */
+  }
+  
+  /* Selected day */
+  .datepicker .datepicker-day.selected {
+    background: #007BFF; /* Background for selected day */
+    color: white; /* Text color for selected day */
+    border-radius: 50%; /* Round selection */
+  }

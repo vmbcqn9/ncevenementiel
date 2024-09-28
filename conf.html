@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="styles7.css">
+    <link rel="stylesheet" href="styles8.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,71 +14,19 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <body>
 
-    <div id="overlay" class="overlay"></div>
-    <nav id="nav">
-        <div id="icons"></div>
-        <a href="index.html" class="name"><h3>NC EVENEMENTIEL</h3></a>
-        <ul id="nav-menu">
-            <li class="dropdown">
-                <a href="location1.html">Chaises </a>
-            </li>
-            <li class="dropdown" id="sous">
-                <a href="chaiseI.html">-   Chaises Invités</a>
-            </li>
-            <li class="dropdown" id="sous">
-                <a href="chaiseDM.html">-   Chaises des mariés</a>
-            </li>
-            <li class="dropdown">
-                <a href="tables.html">Tables</a>
-            </li>
-            <li class="dropdown">
-                <a href="cdt.html">Décorations de table</a>
-            </li>
-            <li class="dropdown">
-                <a href="tonnelles.html">Tonnelles </a>
-            </li>
-            <li class="dropdown">
-                <a href="vaisselle.html">Vaisselle</a>
-            </li>
-            <li class="dropdown">
-                <a href="tdm.html">Trônes des mariés</a>
-            </li>
-            <li class="dropdown">
-                <a href="divers.html">Divers</a>
-            </li>
-            <li class="dropdown">
-                <a href="location.html">Tout nos produits</a>
-            </li>
-          
-            <div id="nav-right2">
-                <li> <a href="galleries.html">Gallerie</a></li>
-                <li><a href="devis.html">Demande de devis</a></li>
-            </div>
-  
-            
-        </ul>
-  
-        <div id="nav-right">
-            
-        
-        <a href="galleries.html">Gallerie</a>
-        <a href="devis.html">Demande de devis</a>
-        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-    </div>
-  <div id="scart"> <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></div>
    
-    </nav>
-
+<div class="bigdiv">
     <div class="container">
         <h1>Récapitulatif de la commande :</h1>
+       
     </div>
-
-    <button id="continue-btn" class="continue-btn" style="display: block;">
-        Continuer
-    </button>
+   
+   
 
     <div class="contact" id="contact" style="display: none;">
-        <form action="https://vmbcqn9.github.io/ncevenementiel/process_form.php" method="post" id="contact-form">
+
+        <h1>Vos informations :</h1>
+        <form action="" method="post" id="contact-form">
             <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
             <input type="text" id="name" name="name" placeholder="Nom" required>
             <input type="tel" id="tel" name="tel" placeholder="Numéro de téléphone" required>
@@ -87,12 +35,12 @@
         
             <!-- Hidden field to hold the cart details -->
             <input type="hidden" id="cartDetails" name="cartDetails">
-        
-            <input type="submit" value="Envoyer">
+            <input type="submit" value="Envoyer" class="env">
+            
         </form>
         
     </div>
-
+</div>
     <script>
         $(document).ready(function() {
             // Initialize datepicker
