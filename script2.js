@@ -61,3 +61,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Initialize EmailJS
+emailjs.init('OYRwLenG3DPP9aE3L'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Collect form data
+    const formData = {
+        prenom: document.getElementById('prenom').value,
+        name: document.getElementById('name').value,
+        tel: document.getElementById('tel').value,
+        email: document.getElementById('Email').value,
+        date: document.getElementById('datepicker').value,
+        cartDetails: document.getElementById('cartDetails').value
+    };
+
+    // Send email using EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'template_3fwrczq', formData)
+    .then(function(response) {
+        alert('Email envoyé avec succès!');
+    }, function(error) {
+        alert('Échec de l\'envoi de l\'email : ' + JSON.stringify(error));
+    });
+});
