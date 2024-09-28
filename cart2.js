@@ -18,17 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
             productDiv.innerHTML = `
                <h3>${item.title}</h3>
                <p>Quantité: ${item.quantity}</p>
+               
             `;
 
             cartContainer.appendChild(productDiv);
         });
 
         // Afficher le prix total
-        const totalDiv = document.createElement('div');
-        totalDiv.classList.add('total-price');
-        totalDiv.innerHTML = `<h3 class="pTot">Prix Total: ${totalPrice.toFixed(2)} €</h3>`;
-        cartContainer.appendChild(totalDiv);
 
+// Créer une div englobante
+const totalContainer = document.createElement('div');
+totalContainer.classList.add('total-container');
+
+// Créer et ajouter totalDiv à totalContainer
+const totalDiv = document.createElement('div');
+totalDiv.classList.add('total-price');
+totalDiv.innerHTML = `<h3 class="pTot">Prix Total: ${totalPrice.toFixed(2)} €</h3>`;
+totalContainer.appendChild(totalDiv);
+
+// Créer et ajouter totalDiv2 à totalContainer
+const totalDiv2 = document.createElement('div');
+totalDiv2.classList.add('continue-btn');
+totalDiv2.innerHTML = `<button id="continue-btn" class="continue-btn" style="display: block;">
+    Continuer
+</button>`;
+totalContainer.appendChild(totalDiv2);
+
+// Ajouter totalContainer au cartContainer
+cartContainer.appendChild(totalContainer);
 
 
     } else {
