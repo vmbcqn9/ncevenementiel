@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function() {
 emailjs.init('OYRwLenG3DPP9aE3L'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();  // Prevent the default form submission
 
-    // Collect form data
+    // Gather form data
     const formData = {
         prenom: document.getElementById('prenom').value,
         name: document.getElementById('name').value,
@@ -79,10 +79,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     };
 
     // Send email using EmailJS
-    emailjs.send('YOUR_SERVICE_ID', 'template_3fwrczq', formData)
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
     .then(function(response) {
-        alert('Email envoyé avec succès!');
+        alert('Email sent successfully!');
     }, function(error) {
-        alert('Échec de l\'envoi de l\'email : ' + JSON.stringify(error));
+        alert('Error sending email: ' + JSON.stringify(error));
     });
 });
+

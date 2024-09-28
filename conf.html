@@ -26,8 +26,7 @@
     <div class="contact" id="contact" style="display: none;">
 
         <h1>Vos informations :</h1>
-        <form action="send.php" method="post" id="contact-form">
-
+        <form method="post" id="contact-form">
             <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
             <input type="text" id="name" name="name" placeholder="Nom" required>
             <input type="tel" id="tel" name="tel" placeholder="Numéro de téléphone" required>
@@ -37,8 +36,8 @@
             <!-- Hidden field to hold the cart details -->
             <input type="hidden" id="cartDetails" name="cartDetails">
             <input type="submit" value="Envoyer" class="env">
-            
         </form>
+        
         
     </div>
 </div>
@@ -69,6 +68,12 @@
     <script src="cart2.js"></script>
     <script src="script2.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init('OYRwLenG3DPP9aE3L'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+    })();
+    </script>
+    
 
 </body>
 </html>
