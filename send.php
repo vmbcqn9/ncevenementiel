@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cartDetails = $_POST['cartDetails'];  // The cart items
 
     // Email settings
-    $to = "sha1gr1@icloud.com";  // Replace with your email
+    $to = "temenirnomando44@icloud.com";  // Replace with your email
     $subject = "Nouvelle commande de " . $prenom . " " . $nom;
     $headers = "From: " . $email . "\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
