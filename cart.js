@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
                <h3>${item.title}</h3>
                <p>Prix par unité: ${item.price} €</p>
                <p>Quantité: ${item.quantity}</p>
-               <p>Prix: ${itemTotalPrice.toFixed(2)} €</p>
+               <p class="prix">Prix: ${itemTotalPrice.toFixed(2)} €</p>
                <button class="remove-item-btn" data-index="${index}"><i class="fa fa-trash-o"></i> Retirer</button>
+
             `;
 
             cartContainer.appendChild(productDiv);
